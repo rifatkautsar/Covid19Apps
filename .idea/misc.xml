@@ -4,16 +4,24 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/arrow.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/bg_bottomnavigation.xml" value="0.13355263157894737" />
         <entry key="app/src/main/res/drawable/bg_button.xml" value="0.13355263157894737" />
         <entry key="app/src/main/res/drawable/bg_home.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.12368421052631579" />
         <entry key="app/src/main/res/drawable/indicator_default.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/indicator_selected.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/indicator_selector.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/splashscreen.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/item_selector.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_statistik.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_word_wide.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_intro.xml" value="0.11348684210526316" />
+        <entry key="app/src/main/res/layout/splashscreen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/splashscreen1.xml" value="0.22" />
         <entry key="app/src/main/res/layout/splashscreen2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/splashscreen3.xml" value="0.13" />
+        <entry key="app/src/main/res/menu/item_menu.xml" value="0.12335526315789473" />
       </map>
     </option>
   </component>

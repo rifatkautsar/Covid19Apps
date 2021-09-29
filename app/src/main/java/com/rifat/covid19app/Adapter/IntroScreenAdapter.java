@@ -1,4 +1,4 @@
-package com.rifat.covid19app;
+package com.rifat.covid19app.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.rifat.covid19app.R;
+import com.rifat.covid19app.Adapter.HomeModel.ScreenIntroItem;
 
 import java.util.List;
 
@@ -29,7 +32,7 @@ public class IntroScreenAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View layoutScreen = inflater.inflate(R.layout.splashscreen1,null);
+        View layoutScreen = inflater.inflate(R.layout.item_intro,null);
 
         ImageView imgSlide = layoutScreen.findViewById(R.id.imgsplash);
         TextView tvIntro = layoutScreen.findViewById(R.id.tvIntro);

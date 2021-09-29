@@ -1,4 +1,4 @@
-package com.rifat.covid19app;
+package com.rifat.covid19app.Adapter.HomeModel;
 
 public class ScreenIntroItem {
     int introtext, img;

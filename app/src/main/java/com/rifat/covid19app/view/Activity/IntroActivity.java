@@ -1,4 +1,4 @@
-package com.rifat.covid19app;
+package com.rifat.covid19app.view.Activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+import com.rifat.covid19app.Adapter.HomeModel.ScreenIntroItem;
+import com.rifat.covid19app.Adapter.IntroScreenAdapter;
+import com.rifat.covid19app.MainActivity;
+import com.rifat.covid19app.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +40,7 @@ public class IntroActivity extends AppCompatActivity {
 
         btngetStarted = findViewById(R.id.btnGetstarted);
         btngetStarted.setOnClickListener(view -> {
-          Intent mainActivity = new Intent(getApplicationContext(),MainActivity.class);
+          Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(mainActivity);
             savePrefsData();
             finish();
