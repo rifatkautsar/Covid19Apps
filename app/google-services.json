@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "21526259668",
+    "project_id": "covid19app-d8d90",
+    "storage_bucket": "covid19app-d8d90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21526259668:android:9ab8ef3567d3ca9b105841",
+        "android_client_info": {
+          "package_name": "com.rifat.covid19app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21526259668-v4jel5nk8o4hj6mmq4fkoviuoc7uf607.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrLYKe3lf8HzYmK8gcjNG95fRvTbAtwcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21526259668-v4jel5nk8o4hj6mmq4fkoviuoc7uf607.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
