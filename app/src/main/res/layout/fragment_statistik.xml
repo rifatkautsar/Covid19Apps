@@ -1,15 +1,256 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg"
+    android:orientation="vertical"
     tools:context=".view.Fragment.FragmentStatistik">
 
-        <TextView
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Statistik Covid 19 di Indonesia"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textColor="@color/light_white"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:minHeight="200dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        app:cardCornerRadius="5dp"
+        android:backgroundTint="#2E5686"
+        android:layout_gravity="center"
+        android:layout_marginTop="180dp"
+        android:layout_height="220dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:layout_height="match_parent"
-            android:text="Statistik" />
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Total kasus"
+                android:textSize="25sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/light_white"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="5dp"
+                    android:backgroundTint="#F4696A"
+                    android:layout_height="90dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Meninggal"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/light_white"
+                            android:layout_height="wrap_content"></TextView>
 
 
-</FrameLayout>
+                        <View style="@style/Divider"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="10K"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/light_white"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="5dp"
+                    android:backgroundTint="#46DD78"
+                    android:layout_height="90dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Sembuh"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/light_white"
+                            android:layout_height="wrap_content"></TextView>
+
+
+                        <View style="@style/Divider"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="10K"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/light_white"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="5dp"
+                    android:backgroundTint="#F3CE62"
+                    android:layout_height="90dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Positif"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/light_white"
+                            android:layout_height="wrap_content"></TextView>
+
+
+                        <View style="@style/Divider"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="10K"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/light_white"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_gravity="bottom"
+                android:background="#D56979"
+                android:alpha="0.5"
+                android:layout_marginTop="175dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="+100"
+                    android:textColor="@color/light_white"
+                    android:textSize="20sp">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_gravity="bottom"
+                android:background="#326C83"
+                android:alpha="0.5"
+                android:layout_marginTop="175dp"
+                android:layout_marginLeft="55dp"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="+100"
+                    android:textColor="@color/light_white"
+                    android:textSize="20sp">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_gravity="bottom"
+                android:background="#BD9466"
+                android:alpha="0.5"
+                android:layout_marginTop="175dp"
+                android:layout_marginLeft="55dp"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="+100"
+                    android:textColor="@color/light_white"
+                    android:textSize="20sp">
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
