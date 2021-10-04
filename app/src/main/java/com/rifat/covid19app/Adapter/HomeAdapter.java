@@ -6,10 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.rifat.covid19app.Adapter.Model.HomeModel;
+import com.rifat.covid19app.Model.HomeModel;
 import com.rifat.covid19app.R;
 
 import java.util.List;

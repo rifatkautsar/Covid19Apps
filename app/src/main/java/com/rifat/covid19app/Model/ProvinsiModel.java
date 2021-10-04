@@ -1,4 +1,4 @@
-package com.rifat.covid19app.Adapter.Model;
+package com.rifat.covid19app.Model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
