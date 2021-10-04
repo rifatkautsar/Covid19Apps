@@ -32,7 +32,7 @@
             android:layout_marginTop="4dp"
             android:text="Last Updated : 1 October 2021 | 12.00 WIB"
             android:textColor="@color/tab_indicator_gray"
-            android:textSize="10sp">
+            android:textSize="11sp">
 
         </TextView>
     </LinearLayout>
@@ -83,7 +83,7 @@
                 android:id="@+id/card1"
                 android:layout_width="120dp"
                 android:layout_height="100dp"
-                android:backgroundTint="@color/bg"
+                android:backgroundTint="@color/light_white"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -99,12 +99,13 @@
                 android:layout_toRightOf="@+id/card1"
                 android:layout_marginStart="15dp"
                 android:layout_height="100dp"
-                android:backgroundTint="@color/bg"
+                android:backgroundTint="@color/light_white"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -115,7 +116,7 @@
                 android:layout_toRightOf="@+id/card2"
                 android:layout_marginStart="15dp"
                 android:layout_height="100dp"
-                android:backgroundTint="@color/bg"
+                android:backgroundTint="@color/light_white"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -128,7 +129,7 @@
     </LinearLayout>
 
     <TextView
-        android:paddingLeft="15dp"
+        android:paddingStart="15dp"
         android:layout_marginTop="13dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -164,7 +165,10 @@
                 android:fontFamily="@font/roboto_bold"
                 android:text="Refresh"
                 android:textColor="#64A5CA"
-                android:textSize="15sp"></TextView>
+                android:textSize="15sp">
+
+
+            </TextView>
 
         </RelativeLayout>
 
@@ -185,14 +189,77 @@
                 android:id="@+id/card4"
                 android:layout_width="120dp"
                 android:layout_height="100dp"
-                android:backgroundTint="@color/bg"
+                android:backgroundTint="@color/light_white"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/flagamerica"
+                        android:layout_height="30dp">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="11sp"
+                        android:text="America"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Deaths : "
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="9,663"
+                            android:layout_alignParentRight="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Cured: "
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="9,663"
+                            android:layout_alignParentRight="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+                    </RelativeLayout>
 
                 </LinearLayout>
+
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -201,12 +268,73 @@
                 android:layout_toRightOf="@+id/card4"
                 android:layout_marginStart="15dp"
                 android:layout_height="100dp"
-                android:backgroundTint="@color/bg"
+                android:backgroundTint="@color/light_white"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/flagamerica"
+                        android:layout_height="30dp">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="11sp"
+                        android:text="America"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Deaths : "
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="9,663"
+                            android:layout_alignParentRight="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Cured: "
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="9,663"
+                            android:layout_alignParentRight="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+                    </RelativeLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -217,12 +345,73 @@
                 android:layout_toRightOf="@+id/card5"
                 android:layout_marginStart="15dp"
                 android:layout_height="100dp"
-                android:backgroundTint="@color/bg"
+                android:backgroundTint="@color/light_white"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/flagamerica"
+                        android:layout_height="30dp">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="11sp"
+                        android:text="America"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Deaths : "
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="9,663"
+                            android:layout_alignParentRight="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Cured: "
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="9,663"
+                            android:layout_alignParentRight="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"></TextView>
+                    </RelativeLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
