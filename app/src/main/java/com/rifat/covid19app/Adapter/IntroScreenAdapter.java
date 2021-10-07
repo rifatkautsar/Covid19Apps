@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.rifat.covid19app.R;
-import com.rifat.covid19app.Adapter.HomeModel.ScreenIntroItem;
+import com.rifat.covid19app.Model.ScreenIntroItem;
 
 import java.util.List;
 
