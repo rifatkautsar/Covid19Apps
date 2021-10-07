@@ -31,7 +31,9 @@ public class ProvinsiIndonesiaViewModel extends ViewModel {
         call.enqueue(new Callback<List<ProvinsiModel>>() {
             @Override
             public void onResponse(Call<List<ProvinsiModel>> call, Response<List<ProvinsiModel>> response) {
-                provinsidata.setValue((ArrayList<ProvinsiModel>) response.body());
+                if (response.isSuccessful()){
+                    provinsidata.setValue((ArrayList<ProvinsiModel>) response.body());
+                }
             }
 
             @Override
