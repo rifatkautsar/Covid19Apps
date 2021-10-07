@@ -5,19 +5,36 @@
       <map>
         <entry key="app/src/main/res/drawable/arrow.xml" value="0.13355263157894737" />
         <entry key="app/src/main/res/drawable/bg_bottomnavigation.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/bg_bottomshape_left.xml" value="0.13355263157894737" />
         <entry key="app/src/main/res/drawable/bg_button.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/bg_button_bantuan.xml" value="0.13355263157894737" />
         <entry key="app/src/main/res/drawable/bg_home.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/bg_konsultasi.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/bg_menu_information.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/bg_menu_obat.xml" value="0.13355263157894737" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.12368421052631579" />
+        <entry key="app/src/main/res/drawable/home.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/ic__contacts.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/ic_hospital.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/ic_information.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/ic_pills.xml" value="0.13355263157894737" />
         <entry key="app/src/main/res/drawable/indicator_default.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/indicator_selected.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/indicator_selector.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/item_selector.xml" value="0.13355263157894737" />
+        <entry key="app/src/main/res/drawable/loadingbar.xml" value="0.12368421052631579" />
+        <entry key="app/src/main/res/layout/activity_detailprovinsi.xml" value="0.11348684210526316" />
+        <entry key="app/src/main/res/layout/activity_detailworlddata.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/fragment_statistik.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/fragment_word_wide.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_statistik.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_word_wide.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/item_all_country.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_intro.xml" value="0.11348684210526316" />
-        <entry key="app/src/main/res/layout/splashscreen.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_loadingbar.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/itemdetailprovinsi.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/loadingbar.xml" value="0.11348684210526316" />
+        <entry key="app/src/main/res/layout/splashscreen.xml" value="0.14" />
         <entry key="app/src/main/res/layout/splashscreen1.xml" value="0.22" />
         <entry key="app/src/main/res/layout/splashscreen2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/splashscreen3.xml" value="0.13" />

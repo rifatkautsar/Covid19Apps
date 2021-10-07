@@ -1,9 +1,9 @@
-package com.rifat.covid19app.Network;
+package com.rifat.covid19app.api;
 
+import com.rifat.covid19app.Model.AllCountryModel;
 import com.rifat.covid19app.Model.HomeModel;
-import com.rifat.covid19app.Model.Provinsi;
 import com.rifat.covid19app.Model.ProvinsiModel;
-import com.rifat.covid19app.Utilities.ApiEndPoint;
+import com.rifat.covid19app.Model.WorldDataModel;
 
 import java.util.List;
 
@@ -20,6 +20,15 @@ public interface ApiInterface {
 
     @GET("indonesia/provinsi")
     Call<List<ProvinsiModel>> getProvinsiData();
+
+    @GET("api")
+    Call<WorldDataModel> getWorldData();
+
+    @GET(ApiEndPoint.END_POINT_ALL_COUNTRY)
+    Call<List<AllCountryModel>> getAllCountryData();
+
+
+
 
 
 }

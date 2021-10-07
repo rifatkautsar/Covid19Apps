@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid19App">
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".view.Activity.AllCountryActivity"></activity>
         <activity android:name=".view.Activity.DetailProvinsiActivity"></activity>
         <activity
             android:name=".view.Activity.IntroActivity"

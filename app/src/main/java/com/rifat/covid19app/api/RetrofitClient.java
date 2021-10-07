@@ -1,6 +1,4 @@
-package com.rifat.covid19app.Network;
-
-import com.rifat.covid19app.Utilities.ApiEndPoint;
+package com.rifat.covid19app.api;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,6 +22,22 @@ public class RetrofitClient {
     public static Retrofit getDataIndonesia(){
         return new Retrofit.Builder()
                 .baseUrl(ApiEndPoint.BASE_URL_INDONESIA)
+                .addConverterFactory(gsonConverterFactory)
+                .client(okHttpClient)
+                .build();
+    }
+
+    public static Retrofit getDataWorldData(){
+        return new Retrofit.Builder()
+                .baseUrl(ApiEndPoint.BASE_URL_GlobalData)
+                .addConverterFactory(gsonConverterFactory)
+                .client(okHttpClient)
+                .build();
+    }
+
+    public static Retrofit getAllCountryData(){
+        return new Retrofit.Builder()
+                .baseUrl(ApiEndPoint.BASE_URL_ALL_COUNTRY_DATA)
                 .addConverterFactory(gsonConverterFactory)
                 .client(okHttpClient)
                 .build();

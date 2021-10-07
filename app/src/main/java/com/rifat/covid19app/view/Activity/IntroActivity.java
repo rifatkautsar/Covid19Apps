@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-import com.rifat.covid19app.Adapter.HomeModel.ScreenIntroItem;
+import com.rifat.covid19app.Model.ScreenIntroItem;
 import com.rifat.covid19app.Adapter.IntroScreenAdapter;
 import com.rifat.covid19app.MainActivity;
 import com.rifat.covid19app.R;

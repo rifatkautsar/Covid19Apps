@@ -15,6 +15,7 @@
     <string name="covid_live_update">Covid 19 Live Updates</string>
     <string name="global_update_covid">Global Data Update</string>
     <string name="top_countries">Top Countries</string>
-    <string name="learn_more_covid19">Learn more About COVID 19 Around The World</string>
+    <string name="learn_more_covid19">See Information About COVID 19 Around The World</string>
     <string name="stayathome">#StayHome</string>
+    <string name="learnmore">Lihat Data Per Provinsi</string>
 </resources>

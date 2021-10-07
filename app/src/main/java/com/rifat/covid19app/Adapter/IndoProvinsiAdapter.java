@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 /**
  * Created by Rifat on 10/6/21.
  */
-public class IndoProvinsiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class IndoProvinsiAdapter extends RecyclerView.Adapter<IndoProvinsiAdapter.ViewHolder> {
 
     private final ArrayList<ProvinsiModel> indoList = new ArrayList<>();
     private final Context context;
@@ -39,28 +40,39 @@ public class IndoProvinsiAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         notifyDataSetChanged();
     }
 
+
     @NonNull
     @Override
     public IndoProvinsiAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.activity_detailprovinsi,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.itemdetailprovinsi,parent,false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull IndoProvinsiAdapter.ViewHolder holder, int position) {
 
+        holder.tvPositif.setText(String.valueOf(indoList.get(position).getAttributesProv().getConfirmed()));
+        holder.tvProvinsi.setText(String.valueOf(indoList.get(position).getAttributesProv().getProvinsi()));
     }
-
 
     @Override
     public int getItemCount() {
         return indoList.size();
     }
-    public class ViewHolder extends RecyclerView.ViewHolder {
 
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        final TextView tvPositif;
+        final TextView tvSembuh;
+        final TextView tvMeninggal;
+        final TextView tvProvinsi;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            tvPositif = itemView.findViewById(R.id.tvKasusProvPositif);
+            tvSembuh = itemView.findViewById(R.id.tvKasusProvSembuh);
+            tvMeninggal = itemView.findViewById(R.id.tvMeninggal);
+            tvProvinsi = itemView.findViewById(R.id.tvProvinsi);
 
         }
     }

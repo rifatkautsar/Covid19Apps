@@ -3,10 +3,9 @@ package com.rifat.covid19app.ViewModel;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.rifat.covid19app.Model.HomeModel;
 import com.rifat.covid19app.Model.ProvinsiModel;
-import com.rifat.covid19app.Network.ApiInterface;
-import com.rifat.covid19app.Network.RetrofitClient;
+import com.rifat.covid19app.api.ApiInterface;
+import com.rifat.covid19app.api.RetrofitClient;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,14 +1,13 @@
 package com.rifat.covid19app.ViewModel;
 
-import android.widget.Toast;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.rifat.covid19app.Model.HomeModel;
-import com.rifat.covid19app.Network.ApiInterface;
-import com.rifat.covid19app.Network.RetrofitClient;
+import com.rifat.covid19app.Utilities.AlertDialog;
+import com.rifat.covid19app.api.ApiInterface;
+import com.rifat.covid19app.api.RetrofitClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +39,7 @@ public class StatistikIndonesiaViewModel extends ViewModel {
 
           @Override
           public void onFailure(Call<List<HomeModel>> call, Throwable t) {
-
+                t.printStackTrace();
           }
       });
 
