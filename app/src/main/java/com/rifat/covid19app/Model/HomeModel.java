@@ -7,10 +7,6 @@ import com.google.gson.annotations.SerializedName;
  * Created by Rifat on 9/29/21.
  */
 public class HomeModel {
-
-    @SerializedName("name")
-    @Expose
-    private String name;
     @SerializedName("positif")
     @Expose
     private String positif;
@@ -37,19 +33,11 @@ public class HomeModel {
      */
     public HomeModel(String name, String positif, String sembuh, String meninggal) {
         super();
-        this.name = name;
         this.positif = positif;
         this.sembuh = sembuh;
         this.meninggal = meninggal;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getPositif() {
         return positif;
