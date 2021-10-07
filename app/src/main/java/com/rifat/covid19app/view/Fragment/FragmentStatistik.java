@@ -1,27 +1,53 @@
 package com.rifat.covid19app.view.Fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.mikephil.charting.animation.Easing;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.github.mikephil.charting.utils.ColorTemplate;
+import com.rifat.covid19app.Model.HomeModel;
+import com.rifat.covid19app.Model.Provinsi;
+import com.rifat.covid19app.Model.ProvinsiModel;
+import com.rifat.covid19app.Network.RetrofitClient;
 import com.rifat.covid19app.R;
+import com.rifat.covid19app.ViewModel.StatistikIndonesiaViewModel;
+import com.rifat.covid19app.view.Activity.DetailProvinsiActivity;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class FragmentStatistik extends Fragment {
 
-    LineChart lineChart;
+    String meninggal,positif,sembuh;
+    TextView tvPositif,tvMeninggal,tvSembuh;
+    List<ProvinsiModel> modelList;
+    Button btnDetail;
 
 
 
@@ -30,60 +56,49 @@ public class FragmentStatistik extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view =inflater.inflate(R.layout.fragment_statistik, container, false);
-
-
-        lineChart = (LineChart) view.findViewById(R.id.lineChart);
-        LineDataSet lineDataSet = new LineDataSet(lineChartDataSet(),"data set");
-        ArrayList<ILineDataSet> iLineDataSets = new ArrayList<>();
-        iLineDataSets.add(lineDataSet);
-
-        LineData lineData = new LineData(iLineDataSets);
-        lineChart.setData(lineData);
-        lineChart.invalidate();
-
-
-        //if you want set background color use below method
-        //lineChart.setBackgroundColor(Color.RED);
-
-        // set text if data are are not available
-        lineChart.setNoDataText("Data not Available");
-
-        //you can modify your line chart graph according to your requirement there are lots of method available in this library
-
-        //now customize line chart
-
-        lineDataSet.setColor(Color.BLUE);
-        lineDataSet.setCircleColor(Color.GREEN);
-        lineDataSet.setDrawCircles(true);
-        lineDataSet.setDrawCircleHole(true);
-        lineDataSet.setLineWidth(5);
-        lineDataSet.setCircleRadius(10);
-        lineDataSet.setCircleHoleRadius(10);
-        lineDataSet.setValueTextSize(10);
-        lineDataSet.setValueTextColor(Color.BLACK);
-
-
-
-        return view;
+        return inflater.inflate(R.layout.fragment_statistik, container, false);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
 
-    private ArrayList<Entry> lineChartDataSet(){
-        ArrayList<Entry> dataSet = new ArrayList<Entry>();
+        tvMeninggal = view.findViewById(R.id.tvMeninggal);
+        tvSembuh = view.findViewById(R.id.tvSembuh);
+        tvPositif = view.findViewById(R.id.tvPositif);
 
-        dataSet.add(new Entry(0,40));
-        dataSet.add(new Entry(1,10));
-        dataSet.add(new Entry(2,15));
-        dataSet.add(new Entry(3,12));
-        dataSet.add(new Entry(4,20));
-        dataSet.add(new Entry(5,50));
-        dataSet.add(new Entry(6,23));
-        dataSet.add(new Entry(7,34));
-        dataSet.add(new Entry(8,12));
-        return  dataSet;
+        btnDetail = view.findViewById(R.id.btnDetailProvinsi);
+        btnDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), DetailProvinsiActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        getDataIndonesia();
+
+    }
+
+    private void getDataIndonesia () {
+        StatistikIndonesiaViewModel viewModel = new ViewModelProvider(this,
+                new ViewModelProvider.NewInstanceFactory()).get(StatistikIndonesiaViewModel.class);
+        viewModel.setStatistikIndonesia();
+        viewModel.getSummaryData().observe(this, new Observer<ArrayList<HomeModel>>() {
+            @Override
+            public void onChanged(ArrayList<HomeModel> homeModels) {
+                if (homeModels.size() > 0) {
+                    tvMeninggal.setText(homeModels.get(0).getMeninggal());
+                    tvSembuh.setText(homeModels.get(0).getSembuh());
+                    tvPositif.setText(homeModels.get(0).getPositif());
+                }
+            }
+        });
+
+    }
+
+    private void getProvinsiData () {
 
     }
 }
