@@ -21,18 +21,77 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="370dp"
+        android:layout_width="350dp"
         android:layout_gravity="center"
         android:layout_marginTop="18dp"
         app:cardCornerRadius="15dp"
         android:backgroundTint="@color/light_white"
-        android:layout_height="250dp">
+        android:layout_height="200dp">
 
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/lineChart"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:paddingLeft="10dp"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgearth"
+                    android:layout_width="120dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ilustrasion_earth"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/lnmoreabout"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@id/imgearth"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvmore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/learnmore"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@id/imgearth"
+                        android:layout_below="@+id/tvmore"
+                        android:text="@string/stayathome"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnDetailProvinsi"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:backgroundTint="@color/bg">
+
+                </Button>
+
+            </RelativeLayout>
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 

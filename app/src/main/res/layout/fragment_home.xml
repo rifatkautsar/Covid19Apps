@@ -31,15 +31,6 @@
 
                 </TextView>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="12dp"
-                    android:contentDescription="@string/app_name"
-                    android:src="@drawable/ic_notification"
-                    android:layout_alignParentEnd="true"
-                    android:layout_height="wrap_content">
-                </ImageView>
             </RelativeLayout>
 
 
@@ -397,7 +388,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Obat"
+                        android:text="Vaksinasi"
                         android:layout_marginLeft="15dp"
                         android:textColor="@color/light_white"
                         android:layout_height="wrap_content">
