@@ -24,17 +24,17 @@
         </LinearLayout>
 
             <Button
-                android:layout_width="150dp"
+                android:layout_width="170dp"
                 android:id="@+id/btnGetstarted"
                 android:layout_centerInParent="true"
                 android:layout_marginBottom="50dp"
                 android:layout_height="60dp"
-                android:layout_alignBottom="@+id/line1"
-                android:background="@drawable/bg_button"
-                android:text="Get Started !"
                 android:visibility="invisible"
-                android:textColor="@color/white"
-                app:backgroundTint="@color/black">
+                android:layout_alignBottom="@+id/line1"
+                android:background="@drawable/bg_bottomnavigation"
+                android:text="Get Started !"
+                android:textColor="#0D3460"
+                app:backgroundTint="@color/light_white">
 
             </Button>
 
